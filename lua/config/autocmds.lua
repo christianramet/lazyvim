@@ -10,9 +10,9 @@
 vim.api.nvim_create_autocmd("FileType", {
   pattern = { "markdown", "text", "gitcommit", "org" },
   callback = function()
-    vim.opt_local.wrap = true -- visual wrap
-    vim.opt_local.linebreak = true --  do not cut words
-    -- vim.opt_local.spell = true -- spell checking
-    vim.opt_local.textwidth = 80 -- hard wrap
+    vim.opt_local.textwidth = 80
+    vim.opt_local.formatoptions:append("t")
+    vim.opt_local.spell = true
+    vim.opt_local.spelllang = { "fr", "en" }
   end,
 })
