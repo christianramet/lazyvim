@@ -6,7 +6,7 @@
 local zet_path = "~/Nextcloud/zet"
 
 vim.keymap.set("n", "<leader>zf", LazyVim.pick("files", { cwd = zet_path }), { desc = "Find Zettel" })
-vim.keymap.set("n", "<leader>zg", LazyVim.pick("live_grep", { cwd = zet_path }), { desc = "Grep Zettel" })
+vim.keymap.set("n", "<leader>z/", LazyVim.pick("live_grep", { cwd = zet_path }), { desc = "Grep Zettel" })
 vim.keymap.set("n", "<leader>zn", function()
   vim.ui.input({ prompt = "Zettel title: " }, function(title)
     if not title or title == "" then
